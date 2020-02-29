@@ -1,8 +1,43 @@
+h1, h2 {
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    span.relays-hint {
+
+        font-size: 60%;
+    }
+}
+
 .dark-mode {
 
     .card {
 
         background: rgba(57, 57, 57, 0.60) !important;
+
+        h6 {
+
+            color: rgb(221, 221, 221) !important;
+        }
     }
 }
 
@@ -11,5 +46,26 @@
     .card {
 
         background-color: rgba(255, 255, 255, 0.3) !important;
+
+        h6 {
+            color: rgb(221, 221, 221);
+        }
+    }
+}
+
+.card {
+
+    .card-header {
+
+        h5 {
+
+            font-size: 2rem;
+            font-weight: lighter;
+        }
+    }
+
+    .border-bottom {
+
+        border-color: rgba(0, 0, 0, 0.125) !important;
     }
 }

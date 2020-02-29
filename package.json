@@ -29,7 +29,7 @@
         "@fortawesome/free-solid-svg-icons": "^5.12.1",
         "@ng-bootstrap/ng-bootstrap": "^6.0.0",
         "@toruslabs/torus-embed": "^1.1.0",
-        "bootstrap": "4.1.1",
+        "bootstrap": "^4.4.1",
         "jazzicon": "^1.5.0",
         "ngx-bootstrap": "^4.1.1",
         "rxjs": "~6.5.4",

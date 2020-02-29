@@ -14,6 +14,10 @@
 
 .light-mode {
 
+    #navbarNavDropdown a.active {
+        color: #e47ab0;
+    }
+
     nav,
     .navbar {
 
@@ -131,7 +135,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
     .transactions-border {
         border-left: 0 !important;
     }
