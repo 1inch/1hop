@@ -10,6 +10,20 @@
 
         background: rgba(48, 48, 48, 0.6) !important;
     }
+
+    .modal-dialog {
+
+        .modal-content {
+
+            background: rgba(48, 48, 48, 0.9) !important;
+        }
+
+        .modal-header,
+        .modal-body {
+
+            background: transparent !important;
+        }
+    }
 }
 
 .light-mode {
@@ -27,6 +41,24 @@
     .btn-open-connect {
 
         background: rgba(234, 234, 234, 0.3) !important;
+    }
+
+    .modal-dialog {
+
+        .modal-content {
+
+            background: rgba(234, 234, 234, 0.8) !important;
+        }
+
+        .modal-header,
+        .modal-body {
+
+            background: transparent !important;
+        }
+    }
+
+    .list-group-item {
+        background: transparent !important;
     }
 }
 
