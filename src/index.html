@@ -17,8 +17,7 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
 
-    <meta
-        content="1x.ag leverage aggreagor among Compound, Fulcrum, Aave, MakerDAO and Lendroid." name="description">
+    <meta content="1x.ag leverage aggreagor among Compound, Fulcrum, Aave, MakerDAO and Lendroid." name="description">
 
     <style>
         html,
@@ -28,6 +27,7 @@
             padding: 0;
 
             font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
         }
 
         html {
@@ -125,86 +125,22 @@
             top: 0;
             z-index: 99999;
         }
-
-        .wrapper {
-            height: 100%;
-            width: 100%;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-            background-size: 1800% 1800%;
-
-            -webkit-animation: rainbow 18s ease infinite;
-            -z-animation: rainbow 18s ease infinite;
-            -o-animation: rainbow 18s ease infinite;
-            animation: rainbow 18s ease infinite;
-        }
-
-        @-webkit-keyframes rainbow {
-            0% {
-                background-position: 0% 82%
-            }
-            50% {
-                background-position: 100% 19%
-            }
-            100% {
-                background-position: 0% 82%
-            }
-        }
-
-        @-moz-keyframes rainbow {
-            0% {
-                background-position: 0% 82%
-            }
-            50% {
-                background-position: 100% 19%
-            }
-            100% {
-                background-position: 0% 82%
-            }
-        }
-
-        @-o-keyframes rainbow {
-            0% {
-                background-position: 0% 82%
-            }
-            50% {
-                background-position: 100% 19%
-            }
-            100% {
-                background-position: 0% 82%
-            }
-        }
-
-        @keyframes rainbow {
-            0% {
-                background-position: 0% 82%
-            }
-            50% {
-                background-position: 100% 19%
-            }
-            100% {
-                background-position: 0% 82%
-            }
-        }
     </style>
 
     <link href="assets/fonts/Roboto.css" rel="stylesheet">
     <link href="assets/fonts/Baloo-Bhai.css" rel="stylesheet">
     <link href="manifest.webmanifest" rel="manifest">
     <meta content="#e61c3f" name="theme-color">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
 </head>
 <body>
-<div class="wrapper">
-    <app-root class="h-full">
-        <div class="spinner-box">
-            <div class="spinner"></div>
-        </div>
-    </app-root>
-</div>
+<app-root class="h-full">
+    <div class="spinner-box">
+        <div class="spinner"></div>
+    </div>
+</app-root>
 
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

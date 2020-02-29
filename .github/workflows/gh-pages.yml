@@ -33,6 +33,7 @@ jobs:
       - name: Build
         run: |
           yarn run build
+          echo "1hope.io" > ./dist/one-hope/CNAME
           node jobs/upload-ipfs.js
 
       - name: Prepare tag
