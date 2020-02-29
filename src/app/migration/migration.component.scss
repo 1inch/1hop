@@ -1,4 +1,15 @@
-.card {
+.dark-mode {
 
-    background: rgba(170, 170, 170, 0.37);
+    .card {
+
+        background: rgba(57, 57, 57, 0.60) !important;
+    }
+}
+
+.light-mode {
+
+    .card {
+
+        background-color: rgba(255, 255, 255, 0.3) !important;
+    }
 }

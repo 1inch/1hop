@@ -29,6 +29,8 @@ img.decline-icon {
 
 .light-mode {
 
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+
     img.ethfinex,
     img.synthetix {
         filter: invert(1);
