@@ -1,13 +1,15 @@
 {
   "name": "one-hop",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node --max_old_space_size=3072 ./node_modules/@angular/cli/bin/ng serve",
+    "start-with-ssl": "node --max_old_space_size=3072 ./node_modules/@angular/cli/bin/ng serve --ssl --ssl-key ./dev/localhost.key --ssl-cert ./dev/localhost.crt",
+    "build": "node --max_old_space_size=3072 ./node_modules/@angular/cli/bin/ng build --prod --build-optimizer --aot=true",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "node patch.js"
   },
   "private": true,
   "dependencies": {
@@ -19,8 +21,12 @@
     "@angular/platform-browser": "~9.0.2",
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
+    "bootstrap": "4.1.1",
+    "ngx-bootstrap": "^4.1.1",
     "rxjs": "~6.5.4",
+    "scrypt": "^6.0.3",
     "tslib": "^1.10.0",
+    "web3": "^2.0.0-alpha.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
