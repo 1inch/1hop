@@ -22,12 +22,10 @@
     <style>
         html,
         body {
-            height: 100%;
             margin: 0;
             padding: 0;
 
             font-family: 'Roboto', sans-serif;
-            background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
         }
 
         html {
@@ -40,10 +38,18 @@
             scrollbar-shadow-color: #646464;
             scrollbar-dark-shadow-color: #646464;
             overflow: auto;
+            height: 100%;
         }
 
         body.twitter-scroll {
             overflow: auto;
+        }
+
+        body {
+
+            min-height: 100%;
+            background: linear-gradient(to top, #cc208e 0%, #6713d2 100%) center center fixed;
+            background-size: cover;
         }
 
         ::-webkit-scrollbar {

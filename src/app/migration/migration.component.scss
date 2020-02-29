@@ -34,9 +34,8 @@ h2 {
 
         background: rgba(57, 57, 57, 0.60) !important;
 
-        h6 {
-
-            color: rgb(221, 221, 221) !important;
+        h5.card-title {
+            color: #e47ab0 !important;
         }
     }
 }
@@ -47,9 +46,13 @@ h2 {
 
         background-color: rgba(255, 255, 255, 0.3) !important;
 
-        h6 {
-            color: rgb(221, 221, 221);
+        h5.card-title {
+            color: #e47ab0 !important;
         }
+    }
+
+    .compound-logo {
+        filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .3));
     }
 }
 
@@ -62,10 +65,18 @@ h2 {
             font-size: 2rem;
             font-weight: lighter;
         }
+
+        h5.card-title {
+            color: #e47ab0 !important;
+        }
     }
 
     .border-bottom {
 
         border-color: rgba(0, 0, 0, 0.125) !important;
+    }
+
+    .card-img-top {
+        height: 170px;
     }
 }

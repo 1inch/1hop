@@ -28,10 +28,6 @@
 
 .light-mode {
 
-    #navbarNavDropdown a.active {
-        color: #e47ab0;
-    }
-
     nav,
     .navbar {
 
@@ -61,6 +57,7 @@
         background: transparent !important;
     }
 }
+
 
 .theme-switcher {
 
@@ -183,7 +180,7 @@
     a {
         &.active {
 
-            color: #56a4cb;
+            color: #e47ab0 !important;
         }
     }
 }
@@ -195,11 +192,6 @@
         a {
             font-size: 18px;
             color: #ddd;
-
-            &.active {
-
-                color: #56a4cb;
-            }
         }
     }
 }

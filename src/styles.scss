@@ -30,6 +30,8 @@ img.decline-icon {
 .light-mode {
 
     background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     img.ethfinex,
     img.synthetix {
@@ -68,7 +70,8 @@ img.decline-icon {
     }
 
     color: #ddd !important;
-    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%) !important;
+    background: linear-gradient(to top, #cc208e 0%, #6713d2 100%) center center fixed;
+    background-size: cover;
 
     .btn-wallet-connect {
         color: #ddd !important;
