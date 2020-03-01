@@ -15,6 +15,7 @@ import { LoadingSpinnerModule } from './loading-spinner/loading-spinner.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap';
 import { ImportComponent } from './import/import.component';
+import { ManageComponent } from './manage/manage.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { ImportComponent } from './import/import.component';
         MigrationComponent,
         BaseComponent,
         NoContentComponent,
-        ImportComponent
+        ImportComponent,
+        ManageComponent
     ],
     imports: [
         BrowserAnimationsModule,

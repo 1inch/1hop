@@ -1,0 +1,78 @@
+<h1 class="pt-4 pt-md-5 pr-3 pl-3 mt-1">
+    Manage CDP positions
+</h1>
+<h2 class="pr-3 pl-3">
+    Migrate, upgrade or downgrade your CDP positions.
+</h2>
+<div class="container mt-4 mt-md-4 p-0 p-md-3">
+    <div class="d-flex flex-column flex-md-row justify-content-around">
+        <div class="card col-12 col-md-3 mb-2 mb-md-0">
+            <h5 class="card-title mt-2" style="position: absolute;">NFT</h5>
+            <img src="assets/aave.svg" class="card-img-top p-5 border-bottom" alt="AAVE">
+            <div class="card-body pb-2 border-bottom">
+                <h5 class="card-title text-center">Supply</h5>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item">100.000 DAI - 10.64% APY</li>
+                <li class="list-group-item">10 WBTC - 0.13% APY</li>
+            </ul>
+            <div class="card-body pb-2 border-bottom">
+                <h5 class="card-title text-center">Borrowing</h5>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item">70.000 USDC - 5.44% APY</li>
+                <li class="list-group-item">100.000 ZRX - 3% APY</li>
+            </ul>
+            <div class="card-body text-center">
+                <a href="#" class="btn btn-info">Migrate</a>
+            </div>
+        </div>
+        <div class="card col-12 col-md-3 mb-2 mb-md-0">
+            <h5 class="card-title mt-2" style="position: absolute;">NFT</h5>
+            <img src="assets/compound.svg" class="card-img-top p-5 border-bottom compound-logo" alt="Compound">
+            <div class="card-body pb-2 border-bottom">
+                <h5 class="card-title text-center">Supply</h5>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li
+                    class="list-group-item"
+                    *ngFor="let position of compound.lending">
+                    {{position.balance}} {{position.symbol}} - {{position.apy}}% APY
+                </li>
+            </ul>
+            <div class="card-body pb-2 border-bottom">
+                <h5 class="card-title text-center">Borrowing</h5>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li
+                    class="list-group-item"
+                    *ngFor="let position of compound.borrowing">
+                    {{position.balance}} {{position.symbol}} - {{position.apy}}% APY
+                </li>
+            </ul>
+            <div class="card-body text-center">
+                <a href="#" class="btn btn-info">Migrate</a>
+            </div>
+        </div>
+        <div class="card col-12 col-md-3 mb-2 mb-md-0">
+            <h5 class="card-title mt-2" style="position: absolute;">NFT</h5>
+            <img src="assets/maker.svg" class="card-img-top p-5 border-bottom" alt="MakerDAO">
+            <div class="card-body pb-2 border-bottom">
+                <h5 class="card-title text-center">Supply</h5>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item">10 ETH - {{maker.dsr}}% APY</li>
+                <li class="list-group-item">200.000 BAT - {{maker.dsr}}% APY</li>
+            </ul>
+            <div class="card-body pb-2 border-bottom">
+                <h5 class="card-title text-center">Borrowing</h5>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item">10.000 DAI - {{maker.dsr}}% APY</li>
+            </ul>
+            <div class="card-body text-center">
+                <a href="#" class="btn btn-info">Migrate</a>
+            </div>
+        </div>
+    </div>
+</div>

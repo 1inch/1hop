@@ -5,6 +5,7 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { BaseComponent } from './base/base.component';
 import { ImportComponent } from './import/import.component';
+import { ManageComponent } from './manage/manage.component';
 
 const routes: Routes = [
     {
@@ -18,6 +19,10 @@ const routes: Routes = [
             {
                 path: 'import/:provider',
                 component: ImportComponent
+            },
+            {
+                path: 'manage',
+                component: ManageComponent
             },
             {
                 path: 'how-it-works',

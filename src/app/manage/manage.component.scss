@@ -1,0 +1,86 @@
+h1, h2 {
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    span.relays-hint {
+
+        font-size: 60%;
+    }
+}
+
+.dark-mode {
+
+    .card {
+
+        background: rgba(57, 57, 57, 0.60) !important;
+
+        h5.card-title {
+            color: #e47ab0 !important;
+        }
+    }
+}
+
+.light-mode {
+
+    .card {
+
+        background-color: rgba(255, 255, 255, 0.3) !important;
+
+        h5.card-title {
+            color: #e47ab0 !important;
+        }
+    }
+
+    .compound-logo {
+        filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .3));
+    }
+}
+
+.card {
+
+    .card-header {
+
+        h5 {
+
+            font-size: 2rem;
+            font-weight: lighter;
+        }
+
+        h5.card-title {
+            color: #e47ab0 !important;
+        }
+    }
+
+    .border-bottom {
+
+        border-color: rgba(0, 0, 0, 0.125) !important;
+    }
+
+    .card-img-top {
+        height: 170px;
+    }
+}
+
+.inactive {
+    opacity: 0.3;
+}
