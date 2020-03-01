@@ -21,7 +21,7 @@ export class ConfigurationService {
     public EXCHANGE_CONTRACT_ADDRESS = '0xB35Ef14817DBF761127C14c2c7cAafDA9AFcae69';
     public PROTOCOL_CONTRACT_ADDRESS = '0x312305ec1a4b5381c5EA9B1aDe83ba416d242909';
     public HOLDER_CONTRACT_ADDRESS = '0x551299D87BC2cCF8ed9272fD746212A504C66FDf';
-    public TOKEN_CONTRACT_ADDRESS = '0x47E3C6C95A498Bbe8e28286F4417e8F99547d8B5';
+    public TOKEN_CONTRACT_ADDRESS = '0x76F482f8141724e008C1591102C3fAD798696eC2';
 
     public fastGasPrice = new ethers.utils.BigNumber(Math.trunc(6 * 100)).mul(1e7);
     public standardGasPrice = new ethers.utils.BigNumber(Math.trunc(11 * 100)).mul(1e7);

@@ -6,6 +6,7 @@ import { TokenService } from '../token.service';
 import { Web3Service } from '../web3.service';
 import { ConfigurationService } from '../configuration.service';
 import { TransactionService } from '../transaction.service';
+import { ethers } from 'ethers';
 
 @Component({
     selector: 'app-import',
@@ -37,11 +38,13 @@ export class ImportComponent implements OnInit {
 
         try {
 
+            const nftTokenBalance = await this.tokenService.getERC20TokenBalanceByAddress(
+                this.web3Service.walletAddress,
+                this.configurationService.TOKEN_CONTRACT_ADDRESS
+            );
+
             if (
-                (await this.tokenService.getERC20TokenBalanceByAddress(
-                    this.web3Service.walletAddress,
-                    this.configurationService.TOKEN_CONTRACT_ADDRESS
-                )).eq(0)
+                nftTokenBalance.eq(0)
             ) {
 
                 const hash = await this.oneHopTokenService.newPosition();
@@ -49,6 +52,39 @@ export class ImportComponent implements OnInit {
 
                 await this.transactionService.waitForTransaction(hash);
             }
+
+            const tokenBalance = await this.tokenService.getTokenBalance(
+                'cDAI',
+                this.web3Service.walletAddress
+            );
+
+            if (
+                !(await this.tokenService.isApproved(
+                    'cDAI',
+                    this.configurationService.TOKEN_CONTRACT_ADDRESS,
+                    tokenBalance
+                ))
+            ) {
+
+                await this.tokenService.approve(
+                    'cDAI',
+                    this.configurationService.TOKEN_CONTRACT_ADDRESS,
+                    tokenBalance
+                );
+            }
+
+            const hash = await this.oneHopTokenService.moveIn(
+                this.tokenService.getTokenBySymbol('DAI').address,
+                this.tokenService.getTokenBySymbol('WBTC').address,
+                await this.oneHopTokenService.tokenOfOwnerByIndex(
+                    this.web3Service.walletAddress,
+                    nftTokenBalance.sub(1)
+                )
+            );
+
+            console.log('hash', hash);
+
+            await this.transactionService.waitForTransaction(hash);
 
             this.router.navigateByUrl('/manage');
         } catch (e) {
