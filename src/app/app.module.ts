@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap';
 import { ImportComponent } from './import/import.component';
 import { ManageComponent } from './manage/manage.component';
+import { MigrateComponent } from './migrate/migrate.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ManageComponent } from './manage/manage.component';
         BaseComponent,
         NoContentComponent,
         ImportComponent,
-        ManageComponent
+        ManageComponent,
+        MigrateComponent
     ],
     imports: [
         BrowserAnimationsModule,
