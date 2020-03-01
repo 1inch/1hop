@@ -38,7 +38,7 @@ export class ImportComponent implements OnInit {
 
         try {
 
-            const nftTokenBalance = await this.tokenService.getERC20TokenBalanceByAddress(
+            let nftTokenBalance = await this.tokenService.getERC20TokenBalanceByAddress(
                 this.web3Service.walletAddress,
                 this.configurationService.TOKEN_CONTRACT_ADDRESS
             );
@@ -72,6 +72,11 @@ export class ImportComponent implements OnInit {
                     tokenBalance
                 );
             }
+
+            nftTokenBalance = await this.tokenService.getERC20TokenBalanceByAddress(
+                this.web3Service.walletAddress,
+                this.configurationService.TOKEN_CONTRACT_ADDRESS
+            );
 
             const hash = await this.oneHopTokenService.moveIn(
                 this.tokenService.getTokenBySymbol('DAI').address,
