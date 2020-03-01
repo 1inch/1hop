@@ -7,6 +7,7 @@ import Torus from '@toruslabs/torus-embed';
 
 import Web3 from 'web3';
 import { Subject } from 'rxjs';
+import { ethers } from 'ethers';
 
 declare let web3: any;
 declare let ethereum: any;
@@ -18,6 +19,7 @@ declare let window: any;
 export class Web3Service {
 
     public web3Provider;
+    public ensProvider;
 
     public backupWeb3Provider;
 
@@ -93,6 +95,14 @@ export class Web3Service {
     }
 
     async initWeb3() {
+
+        const mainProvider = new ethers.providers.JsonRpcProvider(
+            this.rpcUrl
+        );
+
+        this.ensProvider = new ethers.providers.FallbackProvider([
+            mainProvider
+        ]);
 
         if (this.txProviderName) {
 
@@ -199,7 +209,7 @@ export class Web3Service {
 
         try {
 
-            this.walletEns = await this.provider.lookupAddress(this.walletAddress);
+            this.walletEns = await this.ensProvider.lookupAddress(this.walletAddress);
 
         } catch (e) {
 

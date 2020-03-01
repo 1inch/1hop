@@ -9,11 +9,12 @@
         <div class="card col-12 col-md-3 mb-2 mb-md-0">
             <img src="assets/compound.svg" class="card-img-top p-5 border-bottom compound-logo" alt="Compound">
             <div class="card-body text-center">
-                <a href="#" class="btn btn-info" routerLink="/manage">Start import</a>
+                <button href="#" class="btn btn-info" (click)="createNewPosition()">Start import</button>
             </div>
         </div>
         <div class="col-12 col-md-2 mb-2 mb-md-0 text-center align-self-center">
-            <fa-icon [icon]="copyIcon" style="font-size: 72px;opacity: 0.5;"></fa-icon>
+            <fa-icon *ngIf="!loading" [icon]="copyIcon" style="font-size: 72px;opacity: 0.5;"></fa-icon>
+            <app-loading-spinner *ngIf="loading"></app-loading-spinner>
         </div>
         <div class="card col-12 col-md-3 mb-2 mb-md-0 inactive">
             <h5 class="card-title mt-2" style="position: absolute;">NFT</h5>
