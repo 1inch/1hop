@@ -29,16 +29,21 @@
         "@fortawesome/free-solid-svg-icons": "^5.12.1",
         "@ng-bootstrap/ng-bootstrap": "^6.0.0",
         "@toruslabs/torus-embed": "^1.1.0",
+        "angular-page-visibility": "^6.1.4",
         "bootstrap": "^4.4.1",
+        "decimal.js-light": "^2.5.0",
+        "ethers": "^4.0.45",
         "jazzicon": "^1.5.0",
         "ngx-bootstrap": "^4.1.1",
         "rxjs": "~6.5.4",
         "scrypt": "^6.0.3",
+        "toformat": "^2.0.0",
         "tslib": "^1.10.0",
         "web3": "^2.0.0-alpha.1",
         "zone.js": "~0.10.2"
     },
     "devDependencies": {
+        "@angular-builders/custom-webpack": "^9.0.0",
         "@angular-devkit/build-angular": "~0.900.4",
         "@angular/cli": "~9.0.4",
         "@angular/compiler-cli": "~9.0.4",
@@ -58,8 +63,7 @@
         "protractor": "~5.4.3",
         "ts-node": "~8.3.0",
         "tslint": "~5.18.0",
-        "typescript": "~3.7.5",
-        "@angular-builders/custom-webpack": "^9.0.0"
+        "typescript": "~3.7.5"
     },
     "browser": {
         "child_process": false,

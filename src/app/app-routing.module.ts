@@ -4,6 +4,7 @@ import { MigrationComponent } from './migration/migration.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { BaseComponent } from './base/base.component';
+import { ImportComponent } from './import/import.component';
 
 const routes: Routes = [
     {
@@ -13,6 +14,10 @@ const routes: Routes = [
             {
                 path: '',
                 component: MigrationComponent
+            },
+            {
+                path: 'import/:provider',
+                component: ImportComponent
             },
             {
                 path: 'how-it-works',

@@ -15,6 +15,7 @@ export class ConfigurationService {
 
     public ONE_SPLIT_CONTRACT_ADDRESS = '0x3F3e18aef051dC2b489CEf138BB9e224F78f7117';
     public TOKEN_HELPER_CONTRACT_ADDRESS = '0x1ed7221c4a43632e3ed491a8a28bbebd0b450ad8';
+    public MCD_POT_CONTRACT_ADDRESS = '0x197E90f9FAD81970bA7976f33CbD77088E5D7cf7';
 
     public fastGasPrice = new ethers.utils.BigNumber(Math.trunc(6 * 100)).mul(1e7);
     public standardGasPrice = new ethers.utils.BigNumber(Math.trunc(11 * 100)).mul(1e7);

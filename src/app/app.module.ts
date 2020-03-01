@@ -14,13 +14,15 @@ import { environment } from '../environments/environment';
 import { LoadingSpinnerModule } from './loading-spinner/loading-spinner.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap';
+import { ImportComponent } from './import/import.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         MigrationComponent,
         BaseComponent,
-        NoContentComponent
+        NoContentComponent,
+        ImportComponent
     ],
     imports: [
         BrowserAnimationsModule,
